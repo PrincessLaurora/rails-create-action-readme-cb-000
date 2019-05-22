@@ -178,3 +178,4 @@ ActionView::MissingTemplate (Missing template posts/create, application/create w
   Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
   Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
   Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-4.2.11.1/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (34.0ms)
+  [1m[36mPost Load (2.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
