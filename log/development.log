@@ -225,3 +225,21 @@ Started GET "/posts/new" for 151.56.6.155 at 2019-05-22 09:45:18 +0000
 Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/application (0.6ms)
 Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 151.56.6.155 at 2019-05-22 09:45:31 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YS7Lt9X583knaI/sJbw8UPd3uPMgYzinQejdn9/xs4JY63A66+FBsymx2RghbuB4MLvcVP1iTd5m8LDnOQg9mA==", "title"=>"Devilman Crybaby", "description"=>"Man man man man\r\nHuman", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Devilman Crybaby"], ["description", "Man man man man\r\nHuman"], ["created_at", "2019-05-22 09:45:31.559654"], ["updated_at", "2019-05-22 09:45:31.559654"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+Redirected to http://178.128.194.184:55607/posts/5
+Completed 302 Found in 10ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/posts/5" for 151.56.6.155 at 2019-05-22 09:45:31 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.1ms)
